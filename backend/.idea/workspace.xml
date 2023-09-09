@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="05c822ba-3c9f-47e9-aca6-fed2fd4149e1" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/application-gateway-8000/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application-gateway-8000/src/main/java/com/ocean/GateWayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application-gateway-8000/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/common/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/common/RCode/RCodeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/entity/user/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/mqProducer/TemporaryInformationParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/user/CheckEmailVerificationCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/user/CheckTokenParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/user/LoginUserParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/user/UpdateUserParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-consumer-8051/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-consumer-8051/src/main/java/com/ocean/MqConsumer8051Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-consumer-8051/src/main/java/com/ocean/listener/Listener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-consumer-8051/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-consumer-8051/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-producer-8050/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/MQProducer8050Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/controller/TemporaryInformationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/entity/EmailParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/queue/TemporaryInformationDeadMqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/queue/TemporaryInformationTTLMqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/util/SendEmail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/util/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatis-plus-package/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatis-plus-package/src/main/java/com/ocean/mpPackage/globalException/SqlExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatis-plus-package/src/main/java/com/ocean/mpPackage/handler/MyMetaObjectHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatis-plus-package/src/main/java/com/ocean/mpPackage/sqlEntity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user-8001/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/ServiceUser8001Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/util/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_resource/note/项目搭建技术.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_resource/sql/user.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2V3X2cmwfgTb3U3kp6IkCHXSreS" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "C:/Users/ocean/Desktop/neuWeb/backend/mybatis-plus-package/src/main/java/com/ocean/mpPackage",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "service.view.auto.scroll.to.source": "true",
+    "settings.editor.selected.configurable": "spring.boot",
+    "spring.configuration.checksum": "8de429f0063fec9f73187d05b910f27b",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ocean\Desktop\neuWeb\backend\mybatis-plus-package\src\main\java\com\ocean\mpPackage" />
+      <recent name="C:\Users\ocean\Desktop\neuWeb\backend\common-package\src\main\java\com\ocean\commonPackage" />
+      <recent name="C:\Users\ocean\Desktop\neuWeb\backend\mybatis-plus-package\src\main\java\com\ocean" />
+      <recent name="C:\Users\ocean\Desktop\neuWeb\backend\mq-consumer-8051\src\main\resources" />
+      <recent name="C:\Users\ocean\Desktop\neuWeb\backend\mq-producer-8050\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ocean.mpPackage.sqlEntity" />
+      <recent name="com.ocean.commonPackage.entity.user" />
+      <recent name="com.ocean.entity.user" />
+      <recent name="com.ocean.globalException" />
+      <recent name="com.ocean.handler" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ServiceUser8001Application">
+    <configuration name="GateWayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="application-gateway-8000" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.GateWayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ocean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MQProducer8050Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mq-producer-8050" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.MQProducer8050Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ocean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MqConsumer8051Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mq-consumer-8051" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.MqConsumer8051Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ocean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceUser8001Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-user-8001" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.ServiceUser8001Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ocean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.MqConsumer8051Application" />
+        <item itemvalue="Spring Boot.GateWayApplication" />
+        <item itemvalue="Spring Boot.ServiceUser8001Application" />
+        <item itemvalue="Spring Boot.MQProducer8050Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="05c822ba-3c9f-47e9-aca6-fed2fd4149e1" name="更改" comment="" />
+      <created>1694065533654</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694065533654</updated>
+      <workItem from="1694065534733" duration="609000" />
+      <workItem from="1694066433778" duration="499000" />
+      <workItem from="1694102416784" duration="1697000" />
+      <workItem from="1694142672127" duration="16551000" />
+      <workItem from="1694185644613" duration="2710000" />
+      <workItem from="1694222196229" duration="8124000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

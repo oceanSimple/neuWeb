@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ApifoxUploaderProjectSetting">
+    <option name="apifoxAccessToken" value="APS-4WW2zvcd3qnEupdFjCkC0zz4umakiOYG" />
+    <option name="apifoxApiOverwriteMode" value="覆盖所有字段" />
+    <option name="apifoxProjectIds">
+      <array>
+        <option value="# ModuleName:2395410" />
+        <option value="demo:2395410,测试目录" />
+        <option value="MQ-producer-8050:3070495" />
+        <option value="user-login-8001:3070495" />
+        <option value="operate-redis-2-8004:3070495" />
+        <option value="operate-redis-1-8003:3070495" />
+        <option value="service-user-8001:3266188" />
+        <option value="mq-producer-8050:3266188" />
+      </array>
+    </option>
+    <option name="yapiTokens" value="" />
+  </component>
+</project>

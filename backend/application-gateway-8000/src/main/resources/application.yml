@@ -1,0 +1,25 @@
+server:
+  port:
+    8000
+spring:
+  application:
+    name: application-gateway
+  cloud:
+    nacos:
+      server-addr: 111.229.78.126:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: false # 开启从注册中心动态创建路由的功能，利用微服务名进行路由
+      routes:
+        - id: user-service
+          uri: http://localhost:8001
+          predicates:
+            - Path=/user/** # 路径相匹配的进行路由
+
+        - id: mq-producer
+          uri: http://localhost:8050
+          predicates:
+            - Path=/mqProducer/** # 路径相匹配的进行路由
+#          filters:
+#            - StripPrefix=1 # 去掉前缀
