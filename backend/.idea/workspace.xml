@@ -5,48 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05c822ba-3c9f-47e9-aca6-fed2fd4149e1" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/application-gateway-8000/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application-gateway-8000/src/main/java/com/ocean/GateWayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application-gateway-8000/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/common/R.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/common/RCode/RCodeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/entity/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/mqProducer/TemporaryInformationParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/user/CheckEmailVerificationCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/user/CheckTokenParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/user/LoginUserParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/user/UpdateUserParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-consumer-8051/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-consumer-8051/src/main/java/com/ocean/MqConsumer8051Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-consumer-8051/src/main/java/com/ocean/listener/Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-consumer-8051/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-consumer-8051/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-producer-8050/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/MQProducer8050Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/controller/TemporaryInformationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/entity/EmailParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/queue/TemporaryInformationDeadMqConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/queue/TemporaryInformationTTLMqConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/util/SendEmail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/util/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-plus-package/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-plus-package/src/main/java/com/ocean/mpPackage/globalException/SqlExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-plus-package/src/main/java/com/ocean/mpPackage/handler/MyMetaObjectHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-plus-package/src/main/java/com/ocean/mpPackage/sqlEntity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-user-8001/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/ServiceUser8001Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/util/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-user-8001/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static_resource/note/项目搭建技术.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static_resource/sql/user.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-8002/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-8002/src/main/java/com/ocean/ChatRoomApplication8002.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-8002/src/main/java/com/ocean/config/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-8002/src/main/java/com/ocean/server/WebSocketServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-8002/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/ChatRoomFriendApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/controller/FriendController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/service/FriendService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/service/serviceImpl/FriendServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/java/com/ocean/ChatRoomMessageApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/java/com/ocean/controller/MessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/java/com/ocean/service/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/java/com/ocean/service/serviceImpl/MessageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/java/com/ocean/util/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/anotation/ErrorLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/aop/ErrorLogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/entity/chatRoom/Friend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/entity/chatRoom/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/friend/AddFriendParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/friend/DeleteFriendParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/friend/UpdateFriendParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/message/GetMessageParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/message/SetMessageIsReadParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application-gateway-8000/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/application-gateway-8000/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-package/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-package/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/user/CheckEmailVerificationCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/user/CheckEmailVerificationCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/controller/TemporaryInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/controller/TemporaryInformationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/service/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +50,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -89,32 +84,35 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "C:/Users/ocean/Desktop/neuWeb/backend/mybatis-plus-package/src/main/java/com/ocean/mpPackage",
+    "last_opened_file_path": "C:/Users/ocean/Desktop/neuWeb/backend/chat-room-message-8004/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "service.view.auto.scroll.to.source": "true",
-    "settings.editor.selected.configurable": "spring.boot",
-    "spring.configuration.checksum": "8de429f0063fec9f73187d05b910f27b",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "spring.configuration.checksum": "c42ad1b8edbeb06489025f82606a2aaa",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ocean\Desktop\neuWeb\backend\chat-room-message-8004\src\main\resources" />
+      <recent name="C:\Users\ocean\Desktop\neuWeb\backend\chat-room-friend-8003\src\main\resources" />
+      <recent name="C:\Users\ocean\Desktop\neuWeb\backend\static_resource\note" />
       <recent name="C:\Users\ocean\Desktop\neuWeb\backend\mybatis-plus-package\src\main\java\com\ocean\mpPackage" />
       <recent name="C:\Users\ocean\Desktop\neuWeb\backend\common-package\src\main\java\com\ocean\commonPackage" />
-      <recent name="C:\Users\ocean\Desktop\neuWeb\backend\mybatis-plus-package\src\main\java\com\ocean" />
-      <recent name="C:\Users\ocean\Desktop\neuWeb\backend\mq-consumer-8051\src\main\resources" />
-      <recent name="C:\Users\ocean\Desktop\neuWeb\backend\mq-producer-8050\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.ocean.mpPackage.sqlEntity" />
-      <recent name="com.ocean.commonPackage.entity.user" />
-      <recent name="com.ocean.entity.user" />
-      <recent name="com.ocean.globalException" />
-      <recent name="com.ocean.handler" />
+      <recent name="com.ocean.commonPackage.frontParamEntity.chatRoom.message" />
+      <recent name="com.ocean.commonPackage.entity.chatRoom" />
+      <recent name="com.ocean.commonPackage.frontParamEntity.chatRoom.friend" />
+      <recent name="com.ocean" />
+      <recent name="com.ocean.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -124,7 +122,33 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServiceUser8001Application">
+  <component name="RunManager" selected="Spring Boot.GateWayApplication">
+    <configuration name="ChatRoomApplication8002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="chat-room-8002" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.ChatRoomApplication8002" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ocean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChatRoomFriendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="chat-room-friend-8003" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.ChatRoomFriendApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ocean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GateWayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="application-gateway-8000" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.GateWayApplication" />
@@ -151,19 +175,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MqConsumer8051Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="mq-consumer-8051" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.MqConsumer8051Application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ocean.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ServiceUser8001Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="service-user-8001" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.ServiceUser8001Application" />
@@ -179,8 +190,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.MqConsumer8051Application" />
         <item itemvalue="Spring Boot.GateWayApplication" />
+        <item itemvalue="Spring Boot.ChatRoomFriendApplication" />
+        <item itemvalue="Spring Boot.ChatRoomApplication8002" />
         <item itemvalue="Spring Boot.ServiceUser8001Application" />
         <item itemvalue="Spring Boot.MQProducer8050Application" />
       </list>
@@ -199,7 +211,15 @@
       <workItem from="1694102416784" duration="1697000" />
       <workItem from="1694142672127" duration="16551000" />
       <workItem from="1694185644613" duration="2710000" />
-      <workItem from="1694222196229" duration="8124000" />
+      <workItem from="1694222196229" duration="14270000" />
+      <workItem from="1694266260786" duration="3979000" />
+      <workItem from="1694310972350" duration="651000" />
+      <workItem from="1694336782101" duration="977000" />
+      <workItem from="1694438757080" duration="2540000" />
+      <workItem from="1694486004933" duration="149000" />
+      <workItem from="1694486224416" duration="609000" />
+      <workItem from="1694523240868" duration="2440000" />
+      <workItem from="1694583209133" duration="15596000" />
     </task>
     <servers />
   </component>

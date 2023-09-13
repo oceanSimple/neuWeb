@@ -1,5 +1,6 @@
 package com.ocean.controller;
 
+import com.ocean.commonPackage.anotation.ErrorLog;
 import com.ocean.commonPackage.common.R;
 import com.ocean.commonPackage.common.RCode.RCodeEnum;
 import com.ocean.util.SendEmail;
@@ -24,6 +25,7 @@ public class TemporaryInformationController {
     }
 
     @GetMapping("/emailVerificationCode/{email}")
+    @ErrorLog("发送邮箱验证码")
     public R<String> emailVerificationCode(@PathVariable("email") String email) {
         String code = Util.getVerificationCode();
         try {

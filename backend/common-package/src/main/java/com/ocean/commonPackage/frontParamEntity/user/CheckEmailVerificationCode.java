@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CheckEmailVerificationCode {
     private String email; // 邮箱
-    private String code; // 验证码
+    private String emailVerifyCode; // 验证码
 }

@@ -21,5 +21,10 @@ spring:
           uri: http://localhost:8050
           predicates:
             - Path=/mqProducer/** # 路径相匹配的进行路由
+
+        - id: chatRoom-friend
+          uri: http://localhost:8003
+          predicates:
+            - Path=/chatRoom/friend/**
 #          filters:
 #            - StripPrefix=1 # 去掉前缀

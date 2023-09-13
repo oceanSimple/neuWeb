@@ -13,6 +13,7 @@
         <option value="operate-redis-1-8003:3070495" />
         <option value="service-user-8001:3266188" />
         <option value="mq-producer-8050:3266188" />
+        <option value="chat-room-friend-8003:3266188" />
       </array>
     </option>
     <option name="yapiTokens" value="" />

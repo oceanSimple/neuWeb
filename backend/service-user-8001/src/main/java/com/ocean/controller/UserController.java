@@ -1,5 +1,6 @@
 package com.ocean.controller;
 
+import com.ocean.commonPackage.anotation.ErrorLog;
 import com.ocean.commonPackage.common.R;
 import com.ocean.commonPackage.frontParamEntity.user.CheckEmailVerificationCode;
 import com.ocean.commonPackage.frontParamEntity.user.CheckTokenParam;
@@ -12,13 +13,12 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
-@CrossOrigin(origins = "*", maxAge = 3600)
 public class UserController {
     private final UserService userService; // 用于处理用户相关的业务
 
     // 通过构造器注入UserService
     @Autowired
-    private UserController(UserService userService) {
+    public UserController(UserService userService) {
         this.userService = userService;
     }
 
@@ -29,6 +29,7 @@ public class UserController {
      * @return 返回查询的用户信息
      */
     @PostMapping("/login")
+    @ErrorLog("用户登录")
     public R<User> login(@RequestBody LoginUserParam param) {
         return userService.login(param);
     }
@@ -40,6 +41,7 @@ public class UserController {
      * @return 返回token是否正确
      */
     @PostMapping("/checkToken")
+    @ErrorLog("token自动登录")
     public R<String> checkToken(@RequestBody CheckTokenParam param) {
         return userService.checkToken(param);
     }
@@ -51,6 +53,7 @@ public class UserController {
      * @return 返回注册结果
      */
     @PostMapping("/register")
+    @ErrorLog("用户注册")
     public R<User> register(@RequestBody User user) {
         return userService.create(user);
     }
@@ -62,6 +65,7 @@ public class UserController {
      * @return 返回验证码是否正确
      */
     @PostMapping("/checkEmailVerificationCode")
+    @ErrorLog("检查邮箱验证码")
     public R<String> checkEmailVerificationCode(@RequestBody CheckEmailVerificationCode param) {
         return userService.checkEmailVerificationCode(param);
     }
@@ -73,6 +77,7 @@ public class UserController {
      * @return 返回更新结果
      */
     @PostMapping("/update")
+    @ErrorLog("更新用户信息")
     public R<User> update(@RequestBody UpdateUserParam param) {
         return userService.update(param);
     }

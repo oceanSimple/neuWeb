@@ -15,6 +15,9 @@
         <module>mq-producer-8050</module>
         <module>mq-consumer-8051</module>
         <module>mybatis-plus-package</module>
+        <module>chat-room-8002</module>
+        <module>chat-room-friend-8003</module>
+        <module>chat-room-message-8004</module>
     </modules>
 
     <!--依赖版本的统一管理-->

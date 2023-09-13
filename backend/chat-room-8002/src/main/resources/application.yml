@@ -1,0 +1,11 @@
+server:
+  port: 8002
+spring:
+  application:
+    ## 指定服务名称，在nacos中的名字
+    name: chat-room-8002
+  cloud:
+    nacos:
+      discovery:
+        # nacos的服务地址，nacos-server中IP地址:端口号
+        server-addr: 111.229.78.126:8848

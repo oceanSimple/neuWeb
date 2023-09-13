@@ -10,8 +10,8 @@ import com.ocean.commonPackage.frontParamEntity.user.CheckTokenParam;
 import com.ocean.commonPackage.frontParamEntity.user.LoginUserParam;
 import com.ocean.commonPackage.frontParamEntity.user.UpdateUserParam;
 import com.ocean.mapper.UserMapper;
-import com.ocean.service.UserService;
 import com.ocean.mpPackage.sqlEntity.User;
+import com.ocean.service.UserService;
 import com.ocean.util.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -72,7 +72,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             return R.error(RCodeEnum.IDENTIFY_ERROR.getCode(), "token错误，请重新登录");
         }
         // 通过上面的检查，说明token正确，返回用户信息
-        return R.success(RCodeEnum.SUCCESS.getCode(), RCodeEnum.SUCCESS.getMsg(), "token验证成功,自动登录成功");
+        return R.success(RCodeEnum.SUCCESS.getCode(), "自动登录成功", "token验证成功,自动登录成功");
     }
 
     // 注册
@@ -89,6 +89,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             if (result.getCode() != 200) {
                 return R.error(RCodeEnum.ERROR.getCode(), "注册失败");
             } else {
+                // 在redis中存入token
+                String token = Util.getUUID();
+                stringRedisTemplate.opsForHash().put("userToken", result.getData().getCode(), token);
+                result.getData().setToken(token);
                 return R.success(RCodeEnum.SUCCESS.getCode(), "注册成功", result.getData());
             }
         } else {
@@ -100,7 +104,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public R<String> checkEmailVerificationCode(CheckEmailVerificationCode param) {
         // 判断参数是否为空
-        if (param.getEmail() == null || param.getCode() == null) {
+        if (param.getEmail() == null || param.getEmailVerifyCode() == null) {
             return R.error(RCodeEnum.PARAM_ERROR.getCode(), "邮箱或验证码不能为空");
         }
         // 从redis中获取验证码
@@ -109,11 +113,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             return R.error(RCodeEnum.IDENTIFY_ERROR.getCode(), "验证码不存在，请重新获取");
         }
         // 判断验证码是否正确
-        if (!verificationCode.equals(param.getCode())) {
+        if (!verificationCode.equals(param.getEmailVerifyCode())) {
             return R.error(RCodeEnum.IDENTIFY_ERROR.getCode(), "验证码错误，请重新输入");
         }
         // 通过上面的检查，说明验证码正确，返回结果
-        return R.success(RCodeEnum.SUCCESS.getCode(), RCodeEnum.SUCCESS.getMsg(), "验证码正确");
+        return R.success(RCodeEnum.SUCCESS.getCode(), "验证码通过", "验证码正确");
     }
 
     // 根据code获取用户信息
