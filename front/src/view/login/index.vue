@@ -1,45 +1,45 @@
 <!--button样式的网站：https://www.lingdaima.com/css/#/-->
 <template>
-  <div id='background'>
+  <div id="background">
     <el-row>
-      <el-col :span='12' :xs='0'></el-col>
-      <el-col :span='12' :xs='24'>
-        <div id='form'>
-          <div id='title'>用户登录</div>
-          <div id='pic'>
+      <el-col :span="12" :xs="0"></el-col>
+      <el-col :span="12" :xs="24">
+        <div id="form">
+          <div id="title">用户登录</div>
+          <div id="pic">
             <img
-              alt='图片加载失败'
-              src='@/assets/pluginPic/loginLogo.png'
-              style='width: 75%; height: 75%'
+              alt="图片加载失败"
+              src="@/assets/pluginPic/loginLogo.png"
+              style="width: 75%; height: 75%"
             />
           </div>
-          <div id='regisTip'>
+          <div id="regisTip">
             新用户？
-            <a @click='toRegister'>点击注册!</a>
+            <a @click="toRegister">点击注册!</a>
           </div>
-          <div id='info'>
-            <div id='tip'>
+          <div id="info">
+            <div id="tip">
               <div>{{ formTip.left }}</div>
               <div>{{ formTip.right }}</div>
             </div>
-            <div id='infoData'>
+            <div id="infoData">
               <div>
                 <el-input
-                  v-model='loginParams.code'
-                  placeholder='账号'
-                  @blur='checkUserCode'
+                  v-model="loginParams.code"
+                  placeholder="账号"
+                  @blur="checkUserCode"
                 ></el-input>
               </div>
               <div>
                 <el-input
-                  v-model='loginParams.password'
-                  placeholder='密码'
+                  v-model="loginParams.password"
+                  placeholder="密码"
                   show-password
                 ></el-input>
               </div>
             </div>
-            <div class='findBackPsw' @click='toFindBackPsw'>忘记密码？</div>
-            <button @click='login'>登录</button>
+            <div class="findBackPsw" @click="toFindBackPsw">忘记密码？</div>
+            <button @click="login">登录</button>
           </div>
         </div>
       </el-col>
@@ -47,11 +47,12 @@
   </div>
 </template>
 
-<script lang='ts' setup>
+<script lang="ts" setup>
 import { onMounted, reactive } from 'vue'
 import { useUserStore } from '@/store/userStore'
 import { rules } from '@/util/regCheck/rule.ts'
 import { useRouter } from 'vue-router'
+import { useChatRoomStore } from '@/store/chatRoomStore.ts'
 // 引入用户仓库
 let userStore = useUserStore()
 // 引入路由
@@ -69,6 +70,7 @@ const formTip = reactive({
 
 onMounted(async () => {
   await checkToken()
+  await initialWebSocket()
 })
 
 // 账号密码登录
@@ -110,9 +112,20 @@ const toRegister = () => {
 const toFindBackPsw = () => {
   router.push('/findBackPsw')
 }
+
+// 初始化websocket
+const initialWebSocket = async () => {
+  if (useChatRoomStore().websocket === null) {
+    await useChatRoomStore().initWebSocket()
+  }
+  // @ts-ignore
+  useChatRoomStore().websocket.onmessage = (event: any) => {
+    console.log('好友来消息了：' + event.data)
+  }
+}
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 #background {
   background: url('@/assets/background/loginBackground.png') no-repeat center;
   height: 100vh;
@@ -205,8 +218,9 @@ button {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  box-shadow: 6px 6px 12px #c5c5c5,
-  -6px -6px 12px #ffffff;
+  box-shadow:
+    6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff;
 }
 
 button::before {
@@ -218,9 +232,9 @@ button::before {
   top: 0;
   left: 0;
   background-image: linear-gradient(
-      to right,
-      rgb(232, 237, 238) 0%,
-      #10f9da 100%
+    to right,
+    rgb(232, 237, 238) 0%,
+    #10f9da 100%
   );
   transition: 0.5s ease;
   display: block;

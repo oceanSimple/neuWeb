@@ -6,7 +6,10 @@
       <el-menu-item index="2" @click="goChatRoom">
         <template #title>
           <el-icon>
-            <component is="ChatLineRound" />
+            <component
+              is="ChatLineRound"
+              :class="{ messageIconColor: messageIconColor }"
+            />
           </el-icon>
           <span>消息</span>
         </template>
@@ -43,6 +46,42 @@
 <script lang="ts" setup>
 import { optionArray } from '@/view/homePage/header/static.ts'
 import router from '@/router'
+import { onMounted, ref, watch } from 'vue'
+import { useChatRoomStore } from '@/store/chatRoomStore.ts'
+import { getObj } from '@/util/localStorage.ts'
+import { User } from '@/api/user/type.ts'
+
+// 获取chatRoomStore
+const chatRoomStore = useChatRoomStore()
+// 获取用户信息
+const user = getObj<User>('user') as User
+// message Icon的颜色控制
+let messageIconColor = ref(false)
+
+onMounted(async () => {
+  // 初始化好友列表
+  const friendList = await chatRoomStore.getFriendList(user.code)
+  useChatRoomStore().friendList = friendList.data
+  // 初始化hasNewMessage
+  useChatRoomStore().friendList.forEach((item) => {
+    if (item.hasNewMessage) {
+      useChatRoomStore().hasNewMessage = true
+      return
+    }
+  })
+})
+
+// 监听hasNewMessage的变化
+watch(
+  () => useChatRoomStore().hasNewMessage,
+  (newVal) => {
+    if (newVal) {
+      messageIconColor.value = true
+    } else {
+      messageIconColor.value = false
+    }
+  },
+)
 
 const goRoute = (vc: any) => {
   router.push(vc.index)
@@ -65,6 +104,10 @@ const goChatRoom = () => {
 }
 
 .backTip {
+  color: #ff0000;
+}
+
+.messageIconColor {
   color: #ff0000;
 }
 </style>

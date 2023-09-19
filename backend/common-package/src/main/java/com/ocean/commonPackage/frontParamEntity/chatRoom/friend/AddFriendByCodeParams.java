@@ -1,4 +1,4 @@
-package com.ocean.commonPackage.frontParamEntity.chatRoom.message;
+package com.ocean.commonPackage.frontParamEntity.chatRoom.friend;
 
 import com.ocean.commonPackage.anotation.ParamRename;
 import lombok.AllArgsConstructor;
@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GetMessageParams {
+public class AddFriendByCodeParams {
     @ParamRename("code")
-    private String sender;
+    private String userCode;
     @ParamRename("code")
-    private String receiver;
+    private String friendCode;
 }

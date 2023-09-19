@@ -22,4 +22,8 @@ public interface UserService extends IService<User> {
     R<User> getUserByCode(String code); // 根据code获取用户信息
 
     R<User> update(UpdateUserParam param); // 修改个人信息
+
+    R<String> delete(String code); // 删除账号
+
+    R<User> setUserIsDeleted(String code); // 设置账号是否被禁用
 }

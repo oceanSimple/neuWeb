@@ -4,10 +4,13 @@ import com.alibaba.fastjson2.JSON;
 import com.ocean.commonPackage.common.R;
 import com.ocean.commonPackage.common.RCode.RCodeEnum;
 import com.ocean.commonPackage.entity.chatRoom.Friend;
+import com.ocean.commonPackage.entity.user.User;
+import com.ocean.commonPackage.frontParamEntity.chatRoom.friend.AddFriendByCodeParams;
 import com.ocean.commonPackage.frontParamEntity.chatRoom.friend.AddFriendParams;
 import com.ocean.commonPackage.frontParamEntity.chatRoom.friend.DeleteFriendParams;
 import com.ocean.commonPackage.frontParamEntity.chatRoom.friend.UpdateFriendParams;
 import com.ocean.service.FriendService;
+import com.ocean.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -19,8 +22,12 @@ import java.util.List;
 public class FriendServiceImpl implements FriendService {
     private final StringRedisTemplate stringRedisTemplate;
 
+    // 服务间调用：user服务
+    private final UserService userService;
+
     @Autowired
-    public FriendServiceImpl(StringRedisTemplate stringRedisTemplate) {
+    public FriendServiceImpl(UserService userService, StringRedisTemplate stringRedisTemplate) {
+        this.userService = userService;
         this.stringRedisTemplate = stringRedisTemplate;
     }
 
@@ -72,5 +79,24 @@ public class FriendServiceImpl implements FriendService {
         if (flag == 0)
             return R.error(RCodeEnum.ERROR.getCode(), "添加失败");
         return R.success(RCodeEnum.SUCCESS.getCode(), "添加成功", "success");
+    }
+
+    @Override
+    public R<String> addFriendByCode(AddFriendByCodeParams addFriendByCodeParams) {
+        R<User> friendInfo = userService.getUserByCode(addFriendByCodeParams.getFriendCode());
+        Friend friend = new Friend(friendInfo.getData().getCode(), friendInfo.getData().getNickname(), friendInfo.getData().getNickname(), 1);
+        return this.addFriend(new AddFriendParams(addFriendByCodeParams.getUserCode(), friend));
+    }
+
+    @Override
+    public R<String> unshiftFriendToTop(DeleteFriendParams deleteFriendParams) {
+        // 获取好友信息
+        String friendStr = stringRedisTemplate.opsForList().index(deleteFriendParams.getUserCode(), deleteFriendParams.getIndex());
+        Friend friend = JSON.parseObject(friendStr, Friend.class);
+        friend.setHasNewMessage(1); // 设置有新消息
+        // 删除好友记录
+        this.deleteFriend(deleteFriendParams);
+        // 将好友信息插入到第一位
+        return this.addFriend(new AddFriendParams(deleteFriendParams.getUserCode(), friend));
     }
 }

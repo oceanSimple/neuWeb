@@ -58,14 +58,24 @@ public class MessageServiceImpl implements MessageService {
     public R<String> setMessageIsRead(SetMessageIsReadParam param) {
         // 获取redis的key
         String key = Util.spliceSenderAndReceiver(param.getReceiver(), param.getSender());
-        // 清空该用户与好友间的聊天记录
-        stringRedisTemplate.opsForList().trim(key, 0, -1);
-        for (int i = 0; i < param.getMessages().length; i++) {
-            // 将消息转成json字符串
-            String message = JSON.toJSONString(param.getMessages()[i]);
-            // 将消息添加到redis中
-            stringRedisTemplate.opsForList().rightPush(key, message);
+        // 获取list
+        List<String> list = stringRedisTemplate.opsForList().range(key, 0, -1);
+        List<Message> messageList = new ArrayList<>(list.size());
+        // 如果message的receiver是当前用户，且isRead为0，则将isRead设置为1
+        for (int i = 0; i < list.size(); i++) {
+            Message message = JSON.parseObject(list.get(i), Message.class);
+            if (message.getReceiver().equals(param.getSender()) && message.getIsRead() == 0) {
+                message.setIsRead(1);
+            }
+            messageList.add(message);
         }
+        // 清空该用户与好友间的聊天记录
+        stringRedisTemplate.delete(key);
+        // 将新的list转成json字符串
+        ArrayList<String> result = new ArrayList<>(list.size());
+        messageList.forEach(item -> result.add(JSON.toJSONString(item)));
+        stringRedisTemplate.opsForList().rightPushAll(key, result);
+
         return R.success(RCodeEnum.SUCCESS.getCode(), "success", "success");
     }
 }

@@ -17,7 +17,7 @@ export const rules: rulesObj = {
     message: '账号必须是8位数字',
   },
   nickname: {
-    pattern: /^[a-zA-Z0-9]{1,20}$/,
+    pattern: /^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$/,
     message: '昵称必须是1-20个字母或数字',
   },
   email: {

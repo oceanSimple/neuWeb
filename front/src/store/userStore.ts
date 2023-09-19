@@ -49,7 +49,7 @@ export const useUserStore = defineStore('User', {
     // token登录
     async userCheckToken() {
       // 判断userStore.user是否为存在
-      if (!this.user) {
+      if (this.user === null) {
         return false
       }
       // 如果本地保存了user信息，就自动登录

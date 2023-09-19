@@ -1,5 +1,6 @@
 package com.ocean.controller;
 
+import com.ocean.commonPackage.anotation.CheckParam;
 import com.ocean.commonPackage.anotation.ErrorLog;
 import com.ocean.commonPackage.common.R;
 import com.ocean.commonPackage.entity.chatRoom.Message;
@@ -26,18 +27,21 @@ public class MessageController {
 
     @PostMapping("/add")
     @ErrorLog("添加消息")
+    @CheckParam
     public R<Message> addMessage(@RequestBody Message message) {
         return service.addMessage(message);
     }
 
     @PostMapping("/getMessage")
     @ErrorLog("获取消息")
+    @CheckParam
     public R<List<Message>> getMessage(@RequestBody GetMessageParams params) {
         return service.getMessage(params);
     }
 
     @PostMapping("/setMessageIsRead")
     @ErrorLog("设置消息已读")
+    @CheckParam
     public R<String> setMessageIsRead(@RequestBody SetMessageIsReadParam param) {
         return service.setMessageIsRead(param);
     }

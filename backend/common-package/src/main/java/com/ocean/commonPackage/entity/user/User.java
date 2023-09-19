@@ -1,5 +1,6 @@
 package com.ocean.commonPackage.entity.user;
 
+import com.ocean.commonPackage.anotation.ParamRename;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

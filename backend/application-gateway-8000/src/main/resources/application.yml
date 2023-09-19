@@ -26,5 +26,10 @@ spring:
           uri: http://localhost:8003
           predicates:
             - Path=/chatRoom/friend/**
+
+        - id: chatRoom-message
+          uri: http://localhost:8004
+          predicates:
+            - Path=/chatRoom/message/**
 #          filters:
 #            - StripPrefix=1 # 去掉前缀

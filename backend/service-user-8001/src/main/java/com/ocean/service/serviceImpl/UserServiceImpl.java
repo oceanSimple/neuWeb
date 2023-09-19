@@ -160,4 +160,22 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             return R.error(RCodeEnum.ERROR.getCode(), "修改失败");
         }
     }
+
+    @Override
+    public R<String> delete(String code) {
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
+        wrapper.eq("code", code);
+        boolean remove = remove(wrapper);
+        if (remove) {
+            return R.success(RCodeEnum.SUCCESS.getCode(), "删除成功", "删除成功");
+        } else {
+            return R.error(RCodeEnum.ERROR.getCode(), "删除失败");
+        }
+    }
+
+    @Override
+    public R<User> setUserIsDeleted(String code) {
+        UpdateUserParam updateUserParam = new UpdateUserParam(code, "is_deleted", "1");
+        return this.update(updateUserParam);
+    }
 }

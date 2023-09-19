@@ -16,10 +16,10 @@ import java.util.Arrays;
 @Aspect
 public class ErrorLogAspect {
     @Pointcut("@annotation(com.ocean.commonPackage.anotation.ErrorLog)")
-    public void errorLorPointCut() {
+    public void errorLogPointCut() {
     }
 
-    @Around("errorLorPointCut()")
+    @Around("errorLogPointCut()")
     public Object errorLogAround(ProceedingJoinPoint point) throws ClassNotFoundException {
         Object result = null;
         try {
@@ -39,6 +39,8 @@ public class ErrorLogAspect {
             log.error("错误的方法：{}", point.getSignature());
             log.error("传入的参数: {}", Arrays.toString(point.getArgs()));
             log.error("错误原因: {}", throwable.getMessage());
+            log.error("错误堆栈: {}", throwable.getStackTrace());
+            log.error("错误类: {}", throwable.getClass());
         }
         return result;
     }

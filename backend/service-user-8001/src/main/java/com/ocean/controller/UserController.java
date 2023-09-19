@@ -1,5 +1,6 @@
 package com.ocean.controller;
 
+import com.ocean.commonPackage.anotation.CheckParam;
 import com.ocean.commonPackage.anotation.ErrorLog;
 import com.ocean.commonPackage.common.R;
 import com.ocean.commonPackage.frontParamEntity.user.CheckEmailVerificationCode;
@@ -30,6 +31,7 @@ public class UserController {
      */
     @PostMapping("/login")
     @ErrorLog("用户登录")
+    @CheckParam
     public R<User> login(@RequestBody LoginUserParam param) {
         return userService.login(param);
     }
@@ -42,6 +44,7 @@ public class UserController {
      */
     @PostMapping("/checkToken")
     @ErrorLog("token自动登录")
+    @CheckParam
     public R<String> checkToken(@RequestBody CheckTokenParam param) {
         return userService.checkToken(param);
     }
@@ -54,6 +57,7 @@ public class UserController {
      */
     @PostMapping("/register")
     @ErrorLog("用户注册")
+    @CheckParam
     public R<User> register(@RequestBody User user) {
         return userService.create(user);
     }
@@ -66,6 +70,7 @@ public class UserController {
      */
     @PostMapping("/checkEmailVerificationCode")
     @ErrorLog("检查邮箱验证码")
+    @CheckParam
     public R<String> checkEmailVerificationCode(@RequestBody CheckEmailVerificationCode param) {
         return userService.checkEmailVerificationCode(param);
     }
@@ -78,7 +83,15 @@ public class UserController {
      */
     @PostMapping("/update")
     @ErrorLog("更新用户信息")
+    @CheckParam
     public R<User> update(@RequestBody UpdateUserParam param) {
         return userService.update(param);
+    }
+
+    @PostMapping("/getUserByCode")
+    @ErrorLog("根据code获取用户信息")
+    @CheckParam
+    public R<User> getUserByCode(@RequestBody String code) {
+        return userService.getUserByCode(code);
     }
 }

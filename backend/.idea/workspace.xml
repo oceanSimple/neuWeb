@@ -5,42 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05c822ba-3c9f-47e9-aca6-fed2fd4149e1" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/chat-room-8002/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-8002/src/main/java/com/ocean/ChatRoomApplication8002.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-8002/src/main/java/com/ocean/config/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-8002/src/main/java/com/ocean/server/WebSocketServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-8002/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/ChatRoomFriendApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/controller/FriendController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/service/FriendService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/service/serviceImpl/FriendServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/java/com/ocean/ChatRoomMessageApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/java/com/ocean/controller/MessageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/java/com/ocean/service/MessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/java/com/ocean/service/serviceImpl/MessageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/java/com/ocean/util/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/anotation/ErrorLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/aop/ErrorLogAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/entity/chatRoom/Friend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/entity/chatRoom/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/friend/AddFriendParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/friend/DeleteFriendParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/friend/UpdateFriendParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/message/GetMessageParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/message/SetMessageIsReadParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/anotation/CheckParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/anotation/ParamRename.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/aop/CheckParamAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/friend/AddFriendByCodeParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/util/frontParam/CheckFrontParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/util/frontParam/Pattern.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/util/frontParam/SingleParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/util/frontParam/StaticPatternMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user-8001/src/test/java/com/ocean/UserControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application-gateway-8000/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/application-gateway-8000/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-package/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-package/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/user/CheckEmailVerificationCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/user/CheckEmailVerificationCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-room-friend-8003/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chat-room-friend-8003/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/ChatRoomFriendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/ChatRoomFriendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/controller/FriendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/controller/FriendController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/service/FriendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/service/FriendService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/service/serviceImpl/FriendServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/service/serviceImpl/FriendServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-room-message-8004/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chat-room-message-8004/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-room-message-8004/src/main/java/com/ocean/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/java/com/ocean/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-room-message-8004/src/main/java/com/ocean/service/serviceImpl/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-room-message-8004/src/main/java/com/ocean/service/serviceImpl/MessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/aop/ErrorLogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/aop/ErrorLogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/entity/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/entity/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/friend/DeleteFriendParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/friend/DeleteFriendParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/message/GetMessageParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/message/GetMessageParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/message/SetMessageIsReadParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/message/SetMessageIsReadParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/user/LoginUserParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/user/LoginUserParam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/controller/TemporaryInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-producer-8050/src/main/java/com/ocean/controller/TemporaryInformationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/service/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/store/userStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/store/userStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/util/regCheck/rule.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/util/regCheck/rule.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/view/chatRoom/friend/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/view/chatRoom/friend/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/view/chatRoom/message/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/view/chatRoom/message/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/view/homePage/header/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/view/homePage/header/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/view/login/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/view/login/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +51,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="AnnotationType" />
+        <option value="vue html" />
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -73,32 +74,35 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "C:/Users/ocean/Desktop/neuWeb/backend/chat-room-message-8004/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "service.view.auto.scroll.to.source": "true",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
-    "spring.configuration.checksum": "c42ad1b8edbeb06489025f82606a2aaa",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ocean/Desktop/neuWeb/backend/chat-room-message-8004/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;service.view.auto.scroll.to.source&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;6b197abe5529d22e411192aa60ac2038&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ocean\Desktop\neuWeb\backend\chat-room-message-8004\src\main\resources" />
@@ -108,11 +112,11 @@
       <recent name="C:\Users\ocean\Desktop\neuWeb\backend\common-package\src\main\java\com\ocean\commonPackage" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ocean.commonPackage.aop" />
+      <recent name="com.ocean.commonPackage.util.frontParam" />
       <recent name="com.ocean.commonPackage.frontParamEntity.chatRoom.message" />
       <recent name="com.ocean.commonPackage.entity.chatRoom" />
       <recent name="com.ocean.commonPackage.frontParamEntity.chatRoom.friend" />
-      <recent name="com.ocean" />
-      <recent name="com.ocean.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -122,79 +126,117 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GateWayApplication">
-    <configuration name="ChatRoomApplication8002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="chat-room-8002" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.ChatRoomApplication8002" />
+  <component name="RunManager" selected="JUnit.UserControllerTest.test">
+    <configuration name="UserControllerTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-user-8001" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ocean.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.ocean" />
+      <option name="MAIN_CLASS_NAME" value="com.ocean.UserControllerTest" />
+      <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChatRoomFriendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.getUserByCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-user-8001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ocean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ocean" />
+      <option name="MAIN_CLASS_NAME" value="com.ocean.UserControllerTest" />
+      <option name="METHOD_NAME" value="getUserByCode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.setUserIsDeleted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-user-8001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ocean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ocean" />
+      <option name="MAIN_CLASS_NAME" value="com.ocean.UserControllerTest" />
+      <option name="METHOD_NAME" value="setUserIsDeleted" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-user-8001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ocean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ocean" />
+      <option name="MAIN_CLASS_NAME" value="com.ocean.UserControllerTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-user-8001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ocean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ocean" />
+      <option name="MAIN_CLASS_NAME" value="com.ocean.UserControllerTest" />
+      <option name="METHOD_NAME" value="update" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChatRoomFriend8003Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="chat-room-friend-8003" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.ChatRoomFriendApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ocean.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GateWayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="application-gateway-8000" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.GateWayApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ocean.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="MqConsumer8051Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mq-consumer-8051" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.MqConsumer8051Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MQProducer8050Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="mq-producer-8050" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.MQProducer8050Application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ocean.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceUser8001Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="service-user-8001" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ocean.ServiceUser8001Application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ocean.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="JUnit.UserControllerTest.delete" />
+      <item itemvalue="JUnit.UserControllerTest.getUserByCode" />
+      <item itemvalue="JUnit.UserControllerTest.setUserIsDeleted" />
+      <item itemvalue="JUnit.UserControllerTest.test" />
+      <item itemvalue="JUnit.UserControllerTest.update" />
+      <item itemvalue="Spring Boot.MqConsumer8051Application" />
+      <item itemvalue="Spring Boot.ChatRoomFriend8003Application" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.GateWayApplication" />
-        <item itemvalue="Spring Boot.ChatRoomFriendApplication" />
-        <item itemvalue="Spring Boot.ChatRoomApplication8002" />
-        <item itemvalue="Spring Boot.ServiceUser8001Application" />
-        <item itemvalue="Spring Boot.MQProducer8050Application" />
+        <item itemvalue="JUnit.UserControllerTest.test" />
+        <item itemvalue="JUnit.UserControllerTest.delete" />
+        <item itemvalue="JUnit.UserControllerTest.setUserIsDeleted" />
+        <item itemvalue="JUnit.UserControllerTest.update" />
+        <item itemvalue="JUnit.UserControllerTest.getUserByCode" />
       </list>
     </recent_temporary>
   </component>
@@ -220,6 +262,15 @@
       <workItem from="1694486224416" duration="609000" />
       <workItem from="1694523240868" duration="2440000" />
       <workItem from="1694583209133" duration="15596000" />
+      <workItem from="1694660902147" duration="7873000" />
+      <workItem from="1694746732525" duration="10885000" />
+      <workItem from="1694831125092" duration="3431000" />
+      <workItem from="1694939458450" duration="802000" />
+      <workItem from="1694942901987" duration="462000" />
+      <workItem from="1694943377342" duration="1201000" />
+      <workItem from="1695043854989" duration="6554000" />
+      <workItem from="1695086446584" duration="1935000" />
+      <workItem from="1695090716485" duration="2466000" />
     </task>
     <servers />
   </component>
