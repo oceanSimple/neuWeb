@@ -31,5 +31,10 @@ spring:
           uri: http://localhost:8004
           predicates:
             - Path=/chatRoom/message/**
+
+        - id: book-service
+          uri: http://localhost:8005
+          predicates:
+            - Path=/book/** # 路径相匹配的进行路由
 #          filters:
 #            - StripPrefix=1 # 去掉前缀

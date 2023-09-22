@@ -8,7 +8,10 @@ import com.ocean.commonPackage.frontParamEntity.user.LoginUserParam;
 import com.ocean.commonPackage.frontParamEntity.user.UpdateUserParam;
 import com.ocean.mpPackage.sqlEntity.User;
 import com.ocean.service.serviceImpl.UserServiceImpl;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,58 +21,15 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @SpringBootTest
 @ExtendWith(SpringExtension.class)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class UserControllerTest {
     private final Logger log = LoggerFactory.getLogger(UserControllerTest.class);
     @Autowired
     private UserServiceImpl service;
 
     @Test
-    public void test() {
-        // 测试注册
-        R<User> user = create();
-        if (user.getCode().equals(RCodeEnum.SUCCESS.getCode())) log.info("注册成功");
-        else log.info("注册失败");
-
-        // 测试login登录
-        LoginUserParam loginUserParam = new LoginUserParam(user.getData().getCode(), "123456");
-        R<User> login = this.login(loginUserParam);
-        if (login.getCode().equals(RCodeEnum.SUCCESS.getCode())) log.info("登录成功");
-        else log.info("登录失败");
-
-        // 测试checkToken
-        CheckTokenParam checkTokenParam = new CheckTokenParam(login.getData().getCode(), login.getData().getToken());
-        R<String> checkToken = this.checkToken(checkTokenParam);
-        if (checkToken.getCode().equals(RCodeEnum.SUCCESS.getCode())) log.info("token验证成功");
-        else log.info("token验证失败");
-
-        // 测试checkEmailVerificationCode
-        this.checkEmailVerificationCode();
-
-        // 测试getUserByCode
-        this.getUserByCode();
-
-        // 测试update
-        this.update();
-
-        // 测试setUserIsDeleted
-        this.setUserIsDeleted(user.getData().getCode());
-
-        // 测试delete
-        this.delete(user.getData().getCode());
-    }
-
-    //@Test
-    public R<User> login(LoginUserParam loginUserParam) {
-        return service.login(loginUserParam);
-    }
-
-    //@Test
-    public R<String> checkToken(CheckTokenParam checkTokenParam) {
-        return service.checkToken(checkTokenParam);
-    }
-
-    //@Test
-    public R<User> create() {
+    @Order(1)
+    public void create() {
         User user = new User();
         user.setCode("99999999");
         user.setPassword("123456");
@@ -78,43 +38,87 @@ public class UserControllerTest {
         user.setDormitory("南校区1号楼");
         user.setEmail("123");
         user.setPhone("123");
-        return service.create(user);
+        R<User> result = service.create(user);
+        if (result.getCode().equals(RCodeEnum.SUCCESS.getCode()))
+            log.info("创建成功");
+        else
+            log.info("创建失败");
     }
 
-    //@Test
+    @Test
+    @Order(2)
+    public void login() {
+        LoginUserParam loginUserParam = new LoginUserParam("99999999", "123456");
+        R<User> result = service.login(loginUserParam);
+        if (result.getCode().equals(RCodeEnum.SUCCESS.getCode()))
+            log.info("登录成功");
+        else
+            log.info("登录失败");
+    }
+
+    @Test
+    @Order(3)
+    public void checkToken() {
+        CheckTokenParam checkTokenParam = new CheckTokenParam("20210000", "123456");
+        R<String> result = service.checkToken(checkTokenParam);
+        if (result.getCode().equals(RCodeEnum.SUCCESS.getCode()))
+            log.info("token验证成功");
+        else
+            log.info("token验证失败");
+    }
+
+
+    @Test
+    @Order(4)
     public void checkEmailVerificationCode() {
         R<String> stringR = service.checkEmailVerificationCode(new CheckEmailVerificationCode("1", "123456"));
-        if (stringR.getCode() .equals(RCodeEnum.SUCCESS.getCode())) log.info("验证成功");
-        else log.info("验证失败");
+        if (stringR.getCode().equals(RCodeEnum.SUCCESS.getCode()))
+            log.info("邮箱验证码，验证成功");
+        else
+            log.info("邮箱验证码，验证失败");
     }
 
-    //@Test
+    @Test
+    @Order(5)
     public void getUserByCode() {
         R<User> userByCode = service.getUserByCode("00000000");
-        if (userByCode.getCode().equals(RCodeEnum.SUCCESS.getCode())) log.info("查询成功");
-        else log.info("查询失败");
+        if (userByCode.getCode().equals(RCodeEnum.SUCCESS.getCode()))
+            log.info("查询成功");
+        else
+            log.info("查询失败");
     }
 
-    //@Test
+    @Test
+    @Order(6)
     public void update() {
         UpdateUserParam updateUserParam = new UpdateUserParam();
         updateUserParam.setCode("00000000");
         updateUserParam.setTarget("nickname");
         updateUserParam.setData("test");
-        System.out.println(service.update(updateUserParam));
+        R<User> update = service.update(updateUserParam);
+        if (update.getCode().equals(RCodeEnum.SUCCESS.getCode()))
+            log.info("更新成功");
+        else
+            log.info("更新失败");
     }
 
-    //@Test
-    public void setUserIsDeleted(String code) {
-        R<User> userR = service.setUserIsDeleted(code);
-        if (userR.getCode() .equals(RCodeEnum.SUCCESS.getCode())) log.info("封号成功");
-        else log.info("封号失败");
+    @Test
+    @Order(7)
+    public void setUserIsDeleted() {
+        R<User> userR = service.setUserIsDeleted("99999999");
+        if (userR.getCode().equals(RCodeEnum.SUCCESS.getCode()))
+            log.info("封号成功");
+        else
+            log.info("封号失败");
     }
 
-    //@Test
-    public void delete(String code) {
-        R<String> delete = service.delete(code);
-        if (delete.getCode().equals(RCodeEnum.SUCCESS.getCode())) log.info("删除成功");
-        else log.info("删除失败");
+    @Test
+    @Order(8)
+    public void delete() {
+        R<String> delete = service.delete("99999999");
+        if (delete.getCode().equals(RCodeEnum.SUCCESS.getCode()))
+            log.info("删除成功");
+        else
+            log.info("删除失败");
     }
 }

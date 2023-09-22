@@ -26,9 +26,9 @@ public class FriendServiceImpl implements FriendService {
     private final UserService userService;
 
     @Autowired
-    public FriendServiceImpl(UserService userService, StringRedisTemplate stringRedisTemplate) {
-        this.userService = userService;
+    public FriendServiceImpl(StringRedisTemplate stringRedisTemplate, UserService userService) {
         this.stringRedisTemplate = stringRedisTemplate;
+        this.userService = userService;
     }
 
     @Override

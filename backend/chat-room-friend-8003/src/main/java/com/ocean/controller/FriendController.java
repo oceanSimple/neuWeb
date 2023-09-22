@@ -4,6 +4,7 @@ import com.ocean.commonPackage.anotation.CheckParam;
 import com.ocean.commonPackage.anotation.ErrorLog;
 import com.ocean.commonPackage.common.R;
 import com.ocean.commonPackage.entity.chatRoom.Friend;
+import com.ocean.commonPackage.entity.user.User;
 import com.ocean.commonPackage.frontParamEntity.chatRoom.friend.AddFriendByCodeParams;
 import com.ocean.commonPackage.frontParamEntity.chatRoom.friend.AddFriendParams;
 import com.ocean.commonPackage.frontParamEntity.chatRoom.friend.DeleteFriendParams;
@@ -18,7 +19,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/chatRoom/friend")
 public class FriendController {
-
     // friend服务
     private final FriendServiceImpl friendService;
 

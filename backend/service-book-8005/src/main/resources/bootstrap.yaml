@@ -1,0 +1,26 @@
+server:
+  port: 8005
+spring:
+  application:
+    ## 指定服务名称，在nacos中的名字
+    name: service-book-8005
+  cloud:
+    nacos:
+      discovery:
+        # nacos的服务地址，nacos-server中IP地址:端口号
+        server-addr: 111.229.78.126:8848
+      config:
+        # nacos的服务地址，nacos-server中IP地址:端口号
+        server-addr: 111.229.78.126:8848
+        # nacos中的配置文件名
+        file-extension: yaml
+        # group
+        group: neu-website
+        # nacos中的配置文件名,如果不写，则默认spring.application.name
+        prefix: neu-website-config
+management:
+  endpoints:
+    web:
+      exposure:
+        ## yml文件中存在特殊字符，必须用单引号包含，否则启动报错
+        include: '*'

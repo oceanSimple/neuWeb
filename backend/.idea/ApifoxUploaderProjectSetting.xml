@@ -15,6 +15,7 @@
         <option value="mq-producer-8050:3266188" />
         <option value="chat-room-friend-8003:3266188" />
         <option value="chat-room-message-8004:3266188" />
+        <option value="service-book-8005:3266188" />
       </array>
     </option>
     <option name="yapiTokens" value="" />

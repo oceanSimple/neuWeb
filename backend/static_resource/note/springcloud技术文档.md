@@ -122,149 +122,58 @@ public class AuthorizeFilter implements GlobalFilter {
 
 # nacos调用其他模块的服务
 
-1. pom
-   > 注意：
-   >
-   > 1. 使用restTemplate调用服务，需要导入spring-cloud-loadbalancer覆盖已经停更的版本较低的ribbon
-   > 2. 使用feign调用服务，需要导入spring-cloud-starter-openfeign
-   ```xml
-   <?xml version="1.0" encoding="UTF-8"?>
-   <project xmlns="http://maven.apache.org/POM/4.0.0"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-       <modelVersion>4.0.0</modelVersion>
-       <parent>
-           <groupId>com.ocean</groupId>
-           <artifactId>nacos-learn</artifactId>
-           <version>1.0-SNAPSHOT</version>
-       </parent>
-   
-       <groupId>org.example</groupId>
-       <artifactId>consumer-9001</artifactId>
-   
-       <properties>
-           <maven.compiler.source>18</maven.compiler.source>
-           <maven.compiler.target>18</maven.compiler.target>
-           <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-       </properties>
-   
-       <dependencies>
-           <dependency>
-               <groupId>org.springframework.boot</groupId>
-               <artifactId>spring-boot-starter-web</artifactId>
-           </dependency>
-           <dependency>
-               <groupId>com.alibaba.cloud</groupId>
-               <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-           </dependency>
-           <dependency>
-               <groupId>org.example</groupId>
-               <artifactId>common-package</artifactId>
-               <version>1.0-SNAPSHOT</version>
-           </dependency>
-           <!--Ribbon停止维护，故导入此包进行覆盖！-->
-           <dependency>
-               <groupId>org.springframework.cloud</groupId>
-               <artifactId>spring-cloud-loadbalancer</artifactId>
-           </dependency>
-           <!--feign依赖-->
-           <dependency>
-               <groupId>org.springframework.cloud</groupId>
-               <artifactId>spring-cloud-starter-openfeign</artifactId>
-           </dependency>
-       </dependencies>
-   </project>
-   ```
+## feign调用
 
-2. yml
-   ```
-   server:
-     port: 9001
-   spring:
-     application:
-       name: consumer-9001
-     cloud:
-       nacos:
-         discovery:
-           # nacos的服务地址
-           server-addr: 127.0.0.1:8848
-   management:
-     endpoints:
-       web:
-         exposure:
-           ## yml文件中存在特殊字符，必须用单引号包含，否则启动报错
-           include: '*'
-   ```
-
-3. 启动类
-   ```java
-   @SpringBootApplication
-   @EnableDiscoveryClient
-   @EnableFeignClients     // 开启Feign
-   public class Consumer9001Application {
-       public static void main(String[] args) {
-           SpringApplication.run(Consumer9001Application.class, args);
-       }
-   }
-   ```
-
-4. restTemplate调用服务
-    1. 导包！
-    2. config
-       ```java
-       package com.ocean.config;
-       
-       import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-       import org.springframework.context.annotation.Bean;
-       import org.springframework.context.annotation.Configuration;
-       import org.springframework.web.client.RestTemplate;
-       
-       @Configuration
-       public class AutoBeanConfig {
-           // @LoadBalanced: 通过SpringCloud中的负载均衡器，从注册中心获取服务提供者的地址
-           // 通过服务提供者的地址，再通过RestTemplate调用服务提供者的接口
-            @Bean
-            @LoadBalanced
-            public RestTemplate restTemplate() {
-                return new RestTemplate();
-            }
-       }
-       ```
-    3. controller
-       ```
-         @Autowired
-         private RestTemplate restTemplate;
-         
-             @GetMapping("/consumer/student/get")
-         public Student getStudent() {
-             // 通过服务提供者的微服务名称，从注册中心获取服务提供者的地址
-             // 通过服务提供者的地址，再通过RestTemplate调用服务提供者的接口
-             String url = "http://provider-8001/student";
-             Student result = restTemplate.getForObject(url, Student.class);
-             return result;
-         }
-       ```
-
-5. feign调用
-    1. 导包！
-    2. service
-       ```java
-       @Service
-       @FeignClient(value = "provider-8001")    // 指定调用哪个服务
-       public interface StudentService {
-           @GetMapping("/student")
-           Student getStudent();
-       }
-       ```
-    3. controller
-       ```
-           @Autowired
-           private StudentService studentService;
-           
-           @GetMapping("/student")
-           public Student getStudent2() {
-               return studentService.getStudent();
-           }
-       ```
-
-<br/>
+1. 依赖
+   > 关于feign的导包： 1. nacos中去掉ribbon包； 2. 导入openfeign和loadbalancer包
+    ```
+    <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        <exclusions>
+            <exclusion>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+    </dependency>
+    <!--feign依赖-->
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-loadbalancer</artifactId>
+    </dependency>
+    ```
+2. 启动类
+   > 加上@EnableFeignClients // 开启Feign
+3. service接口
+   > 1. @FeignClient(value = "service-user-8001"), value为服务名
+   > 2. @GetMapping("/user/getUserByCode"), 要加上路径
+   > 3. @RequestParam("code") String code, 要加上@RequestParam注解！！！
+    ```java
+    package com.ocean.service;
+    
+    import com.ocean.commonPackage.common.R;
+    import com.ocean.commonPackage.entity.user.User;
+    import org.springframework.cloud.openfeign.FeignClient;
+    import org.springframework.stereotype.Service;
+    import org.springframework.web.bind.annotation.GetMapping;
+    import org.springframework.web.bind.annotation.RequestParam;
+    
+    @Service
+    @FeignClient(value = "service-user-8001")
+    public interface UserService {
+        @GetMapping("/user/getUserByCode")
+        R<User> getUserByCode(@RequestParam("code") String code);
+    }
+    
+    ```
+4. 使用
+   依赖注入service接口后直接调用即可

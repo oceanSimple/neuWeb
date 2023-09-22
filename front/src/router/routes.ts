@@ -3,6 +3,14 @@ const homePageRoutes = [
     path: '/homePage',
     name: 'HomePage',
     component: () => import('@/view/homePage/index.vue'),
+    redirect: '/homePage/book',
+    children: [
+      {
+        path: 'book',
+        name: 'Book',
+        component: () => import('@/view/homePage/main/bookPage/index.vue'),
+      },
+    ],
   },
   {
     path: '/chatRoom',

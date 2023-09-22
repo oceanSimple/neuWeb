@@ -14,5 +14,4 @@ public class SetMessageIsReadParam {
     private String sender;
     @ParamRename("code")
     private String receiver;
-    private Message[] messages;
 }

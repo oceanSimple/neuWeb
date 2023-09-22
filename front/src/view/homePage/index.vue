@@ -5,6 +5,7 @@
     </div>
     <div class="mainPage">
       <Header />
+      <router-view />
     </div>
   </div>
 </template>

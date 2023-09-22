@@ -16,5 +16,5 @@ import lombok.NoArgsConstructor;
 public class DeleteFriendParams {
     @ParamRename("code")
     private String userCode; // 用户的code
-    private Long index; // 要删除的好友的index-redis的list中的索引
+    private Integer index; // 要删除的好友的index-redis的list中的索引
 }

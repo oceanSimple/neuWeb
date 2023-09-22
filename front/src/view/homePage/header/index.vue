@@ -2,6 +2,9 @@
   <div>
     <el-menu :ellipsis="false" mode="horizontal">
       <el-menu-item index="1">LOGO</el-menu-item>
+
+      <SearchBox></SearchBox>
+
       <div class="flex-grow" />
       <el-menu-item index="2" @click="goChatRoom">
         <template #title>
@@ -44,6 +47,7 @@
 </template>
 
 <script lang="ts" setup>
+import SearchBox from '@/view/homePage/main/util/SearchBox.vue'
 import { optionArray } from '@/view/homePage/header/static.ts'
 import router from '@/router'
 import { onMounted, ref, watch } from 'vue'

@@ -88,10 +88,10 @@ public class UserController {
         return userService.update(param);
     }
 
-    @PostMapping("/getUserByCode")
+    @GetMapping("/getUserByCode")
     @ErrorLog("根据code获取用户信息")
     @CheckParam
-    public R<User> getUserByCode(@RequestBody String code) {
+    public R<User> getUserByCode(@RequestParam String code) {
         return userService.getUserByCode(code);
     }
 }
