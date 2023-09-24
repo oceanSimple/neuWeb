@@ -23,6 +23,7 @@ public class ErrorLogAspect {
     public Object errorLogAround(ProceedingJoinPoint point) throws ClassNotFoundException {
         Object result = null;
         try {
+            // 执行方法，捕获异常
             result = point.proceed();
         } catch (Throwable throwable) {
             // 获取类路径
@@ -39,7 +40,7 @@ public class ErrorLogAspect {
             log.error("错误的方法：{}", point.getSignature());
             log.error("传入的参数: {}", Arrays.toString(point.getArgs()));
             log.error("错误原因: {}", throwable.getMessage());
-            log.error("错误堆栈: {}", throwable.getStackTrace());
+            log.error("错误堆栈: {}", (Object[]) throwable.getStackTrace());
             log.error("错误类: {}", throwable.getClass());
         }
         return result;

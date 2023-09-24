@@ -7,8 +7,9 @@ create table book
     price        decimal(10, 2) comment '价格',
     picture      varchar(100) comment '图片地址',
     type         integer comment '书籍分类',
+    address      varchar(20) comment '地址',
     account      integer comment '库存',
-    print_time   datetime comment '出版时间',
+    print_time   char(4) comment '出版年份',
     publisher    varchar(20) comment '出版社',
     version      varchar(20) comment '版本',
     seller       char(8) comment '卖家',
@@ -17,11 +18,13 @@ create table book
 ) comment '书籍表';
 
 insert into book
-(title, author, price, picture, type, account, print_time, publisher, version, seller)
-VALUES ('Java编程思想', 'Bruce Eckel', 108, 'https://img3.doubanio.com/view/subject/l/public/s2728377.jpg', 2, 10,
-        NOW(), '机械工业出版社', '第4版', '00000000'),
-       ('Java核心技术', 'Cay S. Horstmann', 108, 'https://img3.doubanio.com/view/subject/l/public/s2728377.jpg', 2,
-        10, NOW(), '机械工业出版社', '第4版', '00000000');
+(title, author, price, picture, type, address, account, print_time, publisher, version, seller)
+VALUES ('Java编程思想', 'Bruce Eckel', 108,
+        'https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png', 2, '浑南', 10,
+        '2023', '机械工业出版社', '第4版', '00000000'),
+       ('Java核心技术', 'Cay S. Horstmann', 108,
+        'https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png', 2, '浑南',
+        10, '2023', '机械工业出版社', '第4版', '00000000');
 
 /* book type 表 */
 create table book_type

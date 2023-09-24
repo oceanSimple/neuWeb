@@ -6,7 +6,7 @@
       <SearchBox></SearchBox>
 
       <div class="flex-grow" />
-      <el-menu-item index="2" @click="goChatRoom">
+      <el-menu-item index="4" @click="goChatRoom">
         <template #title>
           <el-icon>
             <component
@@ -17,7 +17,8 @@
           <span>消息</span>
         </template>
       </el-menu-item>
-      <el-sub-menu index="3">
+
+      <el-sub-menu index="5">
         <template #title>
           <el-icon>
             <component is="House" />

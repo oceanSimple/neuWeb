@@ -13,6 +13,12 @@ export const optionArray: Option[] = [
     icon: 'Star',
   },
   {
+    label: '出售',
+    name: 'sell',
+    path: '/sell',
+    icon: 'ShoppingCart',
+  },
+  {
     label: '历史订单',
     name: 'historyOrder',
     path: '/historyOrder',

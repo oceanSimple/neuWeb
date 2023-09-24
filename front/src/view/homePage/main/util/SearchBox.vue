@@ -54,7 +54,7 @@ const inputValue = ref('')
 
 <style lang="scss" scoped>
 #container {
-  margin-left: 40%;
+  margin-left: 30%;
   height: 50px;
   margin-top: 10px;
 }

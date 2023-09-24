@@ -59,6 +59,11 @@ const personalInformationRoutes = [
     name: 'Info',
     component: () => import('@/view/personalInformation/info/index.vue'),
   },
+  {
+    path: '/sell',
+    name: 'Sell',
+    component: () => import('@/view/personalInformation/sell/index.vue'),
+  },
 ]
 
 export const route = Array.prototype.concat(

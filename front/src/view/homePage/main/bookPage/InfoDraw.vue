@@ -41,6 +41,12 @@
         <div>{{ bookInfo.printTime }}</div>
       </el-form-item>
     </el-form>
+
+    <template #footer>
+      <div style="flex: auto">
+        <el-button :icon="ChatLineRound" type="primary">与卖家联系</el-button>
+      </div>
+    </template>
   </el-drawer>
 </template>
 
@@ -48,6 +54,7 @@
 import { useBookStore } from '@/store/bookStore.ts'
 import { reactive, ref, watch } from 'vue'
 import { Book } from '@/api/book/type.ts'
+import { ChatLineRound } from '@element-plus/icons-vue'
 
 let bookStore = useBookStore()
 let showDrawer = ref(false)

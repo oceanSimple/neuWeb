@@ -5,42 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05c822ba-3c9f-47e9-aca6-fed2fd4149e1" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/test/java/com/ocean/FriendServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-room-message-8004/src/test/java/com/ocean/MessageServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/entity/book/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/entity/book/BookType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-plus-package/src/main/java/com/ocean/mpPackage/sqlEntity/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis-plus-package/src/main/java/com/ocean/mpPackage/sqlEntity/BookType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-book-8005/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-book-8005/src/main/java/com/ocean/ServiceBook8005Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-book-8005/src/main/java/com/ocean/controller/BookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-book-8005/src/main/java/com/ocean/mapper/BookMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-book-8005/src/main/java/com/ocean/mapper/BookTypeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-book-8005/src/main/java/com/ocean/service/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-book-8005/src/main/java/com/ocean/service/BookTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-book-8005/src/main/java/com/ocean/service/serviceImpl/BookServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-book-8005/src/main/java/com/ocean/service/serviceImpl/BookTypeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-book-8005/src/main/java/com/ocean/util/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-book-8005/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-book-8005/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-book-8005/src/test/java/com/ocean/BookServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-book-8005/src/test/java/com/ocean/BookTypeServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static_resource/sql/book.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application-gateway-8000/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/application-gateway-8000/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-room-friend-8003/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chat-room-friend-8003/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/controller/FriendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/controller/FriendController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/service/serviceImpl/FriendServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-room-friend-8003/src/main/java/com/ocean/service/serviceImpl/FriendServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/friend/DeleteFriendParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/friend/DeleteFriendParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/friend/UpdateFriendParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/friend/UpdateFriendParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/message/SetMessageIsReadParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/frontParamEntity/chatRoom/message/SetMessageIsReadParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user-8001/src/main/java/com/ocean/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user-8001/src/test/java/com/ocean/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user-8001/src/test/java/com/ocean/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_resource/note/springcloud技术文档.md" beforeDir="false" afterPath="$PROJECT_DIR$/static_resource/note/springcloud技术文档.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/aop/ErrorLogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-package/src/main/java/com/ocean/commonPackage/aop/ErrorLogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_resource/note/项目搭建技术.md" beforeDir="false" afterPath="$PROJECT_DIR$/static_resource/note/项目搭建技术.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_resource/sql/book.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static_resource/sql/book.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/src/router/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/router/routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/src/view/homePage/header/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/view/homePage/header/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/view/homePage/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/view/homePage/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/view/homePage/header/static.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/view/homePage/header/static.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/view/homePage/main/bookPage/InfoDraw.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/view/homePage/main/bookPage/InfoDraw.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/view/homePage/main/util/SearchBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/view/homePage/main/util/SearchBox.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +42,7 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
   </component>
@@ -222,8 +195,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ServiceBook8005Application" />
         <item itemvalue="Spring Boot.ServiceUser8001Application" />
+        <item itemvalue="Spring Boot.ServiceBook8005Application" />
         <item itemvalue="Spring Boot.GateWayApplication" />
         <item itemvalue="JUnit.BookServiceTest.getBookList" />
         <item itemvalue="JUnit.BookTypeServiceTest.getAllBookType" />
@@ -269,7 +242,9 @@
       <workItem from="1695267793318" duration="113000" />
       <workItem from="1695267997584" duration="4531000" />
       <workItem from="1695284321959" duration="1373000" />
-      <workItem from="1695355232044" duration="2228000" />
+      <workItem from="1695355232044" duration="3508000" />
+      <workItem from="1695434405755" duration="5453000" />
+      <workItem from="1695516008142" duration="632000" />
     </task>
     <servers />
   </component>
